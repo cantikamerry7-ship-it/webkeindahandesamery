@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* =========================
+   WARNA WEBSITE
+========================= */
+
+:root {
+    --hijau: #285943;
+    --hijau-muda: #4f8063;
+    --krem: #f7f4eb;
+    --krem-gelap: #e9e4d5;
+    --putih: #ffffff;
+    --teks: #26362c;
+    --abu: #68746c;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--krem);
+    color: var(--teks);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(247, 244, 235, 0.95);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(40, 89, 67, 0.1);
+}
+
+.navbar {
+    max-width: 1150px;
+
+    min-height: 75px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: var(--hijau);
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* MENU */
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    gap: 6px;
+}
+
+.nav-links a {
+    display: block;
+
+    padding: 9px 13px;
+
+    border-radius: 8px;
+
+    color: #536158;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--hijau);
+
+    background: rgba(40, 89, 67, 0.1);
+}
+
+
+/* TOMBOL MENU HP */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--hijau);
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 50, 34, 0.85),
+            rgba(20, 50, 34, 0.35)
+        ),
+
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85")
+        center / cover;
+}
+
+
+.hero-content {
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+
+    color: white;
+}
+
+
+/* BADGE */
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.15);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    font-size: 13px;
+}
+
+
+/* JUDUL */
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(48px, 7vw, 82px);
+
+    line-height: 1.08;
+
+    max-width: 700px;
+}
+
+.hero h1 span {
+    color: #d8e7bb;
+}
+
+
+/* DESKRIPSI */
+
+.hero p {
+    max-width: 600px;
+
+    margin: 22px 0 30px;
+
+    color: #f0f3eb;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: white;
+
+    color: var(--hijau);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.btn-outline {
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.7);
+}
+
+.btn-outline:hover {
+    background: white;
+
+    color: var(--hijau);
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 90px 25px;
+}
+
+
+/* JUDUL SECTION */
+
+.section-title {
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-title span {
+    color: var(--hijau-muda);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+
+    color: var(--hijau);
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: var(--abu);
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.feature-card {
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 40px rgba(35, 63, 47, 0.1);
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+}
+
+.icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: var(--hijau);
+
+    margin-bottom: 8px;
+
+    font-size: 20px;
+}
+
+.feature-card p {
+    color: var(--abu);
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+    padding: 80px 25px;
+
+    background: var(--hijau);
+
+    color: white;
+
+    text-align: center;
+}
+
+.quote {
+    max-width: 800px;
+
+    margin: auto;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+
+    background: #1d3d2e;
+
+    color: #dce5dd;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ANIMASI
+========================= */
+
+.hero-content {
+    animation: muncul 0.9s ease;
+}
+
+.feature-card {
+    animation: muncul 0.8s ease;
+}
+
+@keyframes muncul {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 800px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        min-height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 15px 20px;
+
+        background: var(--krem);
+
+        box-shadow:
+            0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 570px;
+    }
+
+    .hero-content {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    /* BUTTON */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .btn {
+        padding: 11px 18px;
+    }
+
+
+    /* SECTION */
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 31px;
+    }
+
+
+    /* CARD */
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 27px;
+    }
+
+
+    /* QUOTE */
+
+    .quote {
+        font-size: 22px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        font-size: 12px;
+    }
+
+}
+
+
+/* HP KECIL */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: 41px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+                     }
