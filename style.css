@@ -1,23 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
-/* =========================
-   WARNA WEBSITE
-========================= */
+/* =================================
+   DASAR WEBSITE
+================================= */
 
 :root {
     --hijau: #285943;
-    --hijau-muda: #4f8063;
-    --krem: #f7f4eb;
-    --krem-gelap: #e9e4d5;
+    --hijau-muda: #5d876c;
+    --hijau-tua: #183d2b;
+    --krem: #f7f5ed;
     --putih: #ffffff;
     --teks: #26362c;
     --abu: #68746c;
+    --border: #e3e8df;
 }
-
-
-/* =========================
-   RESET
-========================= */
 
 * {
     margin: 0;
@@ -47,140 +43,120 @@ img {
 }
 
 
-/* =========================
+/* =================================
    NAVBAR
-========================= */
+================================= */
 
 header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
 
-    background: rgba(247, 244, 235, 0.95);
+    background: rgba(247, 245, 237, 0.96);
 
     backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid rgba(40, 89, 67, 0.1);
+    border-bottom: 1px solid var(--border);
 }
 
 .navbar {
+    width: 100%;
     max-width: 1150px;
-
-    min-height: 75px;
+    min-height: 72px;
 
     margin: auto;
-
     padding: 0 25px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
-
-
-/* LOGO */
 
 .logo {
     color: var(--hijau);
 
     font-size: 20px;
-
     font-weight: 700;
+
+    white-space: nowrap;
 }
 
-
-/* MENU */
-
 .nav-links {
-    list-style: none;
-
     display: flex;
+    align-items: center;
+    gap: 4px;
 
-    gap: 6px;
+    list-style: none;
 }
 
 .nav-links a {
     display: block;
 
-    padding: 9px 13px;
+    padding: 9px 12px;
 
     border-radius: 8px;
 
     color: #536158;
 
     font-size: 14px;
-
     font-weight: 600;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--hijau);
 
-    background: rgba(40, 89, 67, 0.1);
+    background: #e6eee7;
 }
-
-
-/* TOMBOL MENU HP */
 
 .menu-toggle {
     display: none;
 
     border: none;
-
     background: transparent;
 
     color: var(--hijau);
 
-    font-size: 28px;
+    font-size: 27px;
 
     cursor: pointer;
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* =================================
+   HERO HOME
+================================= */
 
 .hero {
     min-height: 650px;
 
     display: flex;
-
     align-items: center;
-
-    position: relative;
 
     background:
         linear-gradient(
             90deg,
-            rgba(20, 50, 34, 0.85),
-            rgba(20, 50, 34, 0.35)
+            rgba(20, 53, 36, 0.88),
+            rgba(20, 53, 36, 0.35)
         ),
 
         url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85")
-        center / cover;
+        center / cover no-repeat;
 }
-
 
 .hero-content {
     width: 100%;
-
     max-width: 1150px;
 
     margin: auto;
+    padding: 80px 25px;
 
-    padding: 70px 25px;
+    color: var(--putih);
 
-    color: white;
+    animation: muncul 0.8s ease;
 }
-
-
-/* BADGE */
 
 .badge {
     display: inline-block;
@@ -189,53 +165,46 @@ header {
 
     margin-bottom: 20px;
 
+    border: 1px solid rgba(255,255,255,0.35);
+
     border-radius: 50px;
 
-    background: rgba(255,255,255,0.15);
-
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.13);
 
     font-size: 13px;
 }
 
-
-/* JUDUL */
-
 .hero h1 {
+    max-width: 750px;
+
     font-family: 'Playfair Display', serif;
 
     font-size: clamp(48px, 7vw, 82px);
 
     line-height: 1.08;
-
-    max-width: 700px;
 }
 
 .hero h1 span {
-    color: #d8e7bb;
+    color: #d9e8bd;
 }
-
-
-/* DESKRIPSI */
 
 .hero p {
     max-width: 600px;
 
     margin: 22px 0 30px;
 
-    color: #f0f3eb;
+    color: #edf2ec;
 
     font-size: 17px;
 }
 
 
-/* =========================
+/* =================================
    BUTTON
-========================= */
+================================= */
 
 .hero-buttons {
     display: flex;
-
     gap: 12px;
 
     flex-wrap: wrap;
@@ -250,77 +219,74 @@ header {
 
     font-weight: 700;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn-primary {
-    background: white;
-
+    background: var(--putih);
     color: var(--hijau);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .btn-outline {
-    color: white;
-
     border: 1px solid rgba(255,255,255,0.7);
+
+    color: white;
 }
 
 .btn-outline:hover {
     background: white;
-
     color: var(--hijau);
 }
 
 
-/* =========================
-   SECTION
-========================= */
+/* =================================
+   SECTION UMUM
+================================= */
 
 .section {
+    width: 100%;
     max-width: 1150px;
 
     margin: auto;
 
-    padding: 90px 25px;
+    padding: 85px 25px;
 }
-
-
-/* JUDUL SECTION */
 
 .section-title {
     max-width: 700px;
 
-    margin: 0 auto 50px;
+    margin: 0 auto 45px;
 
     text-align: center;
 }
 
-.section-title span {
+.section-title span,
+.page-header span,
+.small-title,
+.nature-card span,
+.community-content span {
     color: var(--hijau-muda);
 
     font-size: 12px;
-
     font-weight: 700;
 
     letter-spacing: 2px;
 }
 
 .section-title h2 {
-    font-family: 'Playfair Display', serif;
+    margin: 10px 0;
 
     color: var(--hijau);
 
+    font-family: 'Playfair Display', serif;
+
     font-size: 38px;
 
-    line-height: 1.2;
-
-    margin: 10px 0;
+    line-height: 1.25;
 }
 
 .section-title p {
@@ -330,9 +296,9 @@ header {
 }
 
 
-/* =========================
-   CARD
-========================= */
+/* =================================
+   CARD HOME
+================================= */
 
 .feature-grid {
     display: grid;
@@ -343,16 +309,17 @@ header {
 }
 
 .feature-card {
+    padding: 30px;
+
     background: white;
 
-    padding: 32px;
+    border: 1px solid var(--border);
 
-    border-radius: 15px;
+    border-radius: 16px;
 
-    box-shadow:
-        0 15px 40px rgba(35, 63, 47, 0.1);
+    box-shadow: 0 12px 35px rgba(35, 63, 47, 0.08);
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .feature-card:hover {
@@ -360,15 +327,15 @@ header {
 }
 
 .icon {
-    font-size: 35px;
+    margin-bottom: 13px;
 
-    margin-bottom: 15px;
+    font-size: 34px;
 }
 
 .feature-card h3 {
-    color: var(--hijau);
-
     margin-bottom: 8px;
+
+    color: var(--hijau);
 
     font-size: 20px;
 }
@@ -380,16 +347,14 @@ header {
 }
 
 
-/* =========================
+/* =================================
    QUOTE
-========================= */
+================================= */
 
 .quote-section {
-    padding: 80px 25px;
+    padding: 75px 25px;
 
     background: var(--hijau);
-
-    color: white;
 
     text-align: center;
 }
@@ -399,6 +364,8 @@ header {
 
     margin: auto;
 
+    color: white;
+
     font-family: 'Playfair Display', serif;
 
     font-size: 28px;
@@ -407,14 +374,418 @@ header {
 }
 
 
-/* =========================
+/* =================================
+   HEADER HALAMAN 2-5
+================================= */
+
+.page-header {
+    padding: 85px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(32, 76, 54, 0.92),
+            rgba(32, 76, 54, 0.92)
+        );
+}
+
+.page-header span {
+    color: #c8dfb8;
+}
+
+.page-header h1 {
+    margin: 8px 0;
+
+    color: white;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(38px, 6vw, 60px);
+
+    line-height: 1.2;
+}
+
+.page-header p {
+    color: #e1e9e2;
+
+    font-size: 15px;
+}
+
+
+/* =================================
+   TENTANG DESA
+================================= */
+
+.about {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.about-image {
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 35px rgba(35, 63, 47, 0.12);
+}
+
+.about-image img {
+    height: 430px;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.04);
+}
+
+.about-text h2 {
+    margin: 8px 0 18px;
+
+    color: var(--hijau);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 38px;
+
+    line-height: 1.25;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+
+    color: var(--abu);
+
+    font-size: 15px;
+}
+
+.info-box {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.info-box div {
+    padding: 13px 8px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    text-align: center;
+}
+
+.info-box strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 22px;
+}
+
+.info-box span {
+    color: var(--abu);
+
+    font-size: 12px;
+}
+
+
+/* =================================
+   KEINDAHAN ALAM
+================================= */
+
+.nature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.nature-card {
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(35, 63, 47, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.nature-card:hover {
+    transform: translateY(-5px);
+}
+
+.nature-card img {
+    height: 250px;
+
+    object-fit: cover;
+}
+
+.nature-card > div {
+    padding: 23px;
+}
+
+.nature-card h3 {
+    margin: 5px 0 8px;
+
+    color: var(--hijau);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 24px;
+}
+
+.nature-card p {
+    color: var(--abu);
+
+    font-size: 14px;
+}
+
+.nature-message {
+    padding: 70px 25px;
+
+    background: #e6eee4;
+
+    text-align: center;
+}
+
+.nature-message div {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.nature-message h2 {
+    margin-bottom: 10px;
+
+    color: var(--hijau);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 32px;
+}
+
+.nature-message p {
+    color: var(--abu);
+}
+
+
+/* =================================
+   BUDAYA
+================================= */
+
+.culture-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.culture-card {
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(35, 63, 47, 0.07);
+
+    transition: 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-5px);
+}
+
+.culture-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background: #e6eee4;
+
+    font-size: 27px;
+}
+
+.culture-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--hijau);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 24px;
+}
+
+.culture-card p {
+    color: var(--abu);
+
+    font-size: 14px;
+}
+
+.community {
+    padding: 80px 25px;
+
+    background: var(--hijau);
+
+    text-align: center;
+}
+
+.community-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.community-content span {
+    color: #c8dfb8;
+}
+
+.community-content h2 {
+    margin: 8px 0 12px;
+
+    color: white;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 36px;
+}
+
+.community-content p {
+    color: #e2ebe4;
+}
+
+
+/* =================================
+   GALERI
+================================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 280px;
+
+    border-radius: 16px;
+
+    background: #ddd;
+
+    box-shadow: 0 10px 30px rgba(35, 63, 47, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 280px;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-caption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 45px 20px 18px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.75)
+    );
+
+    color: white;
+}
+
+.gallery-caption h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 22px;
+}
+
+.gallery-caption p {
+    font-size: 13px;
+
+    color: #e7e7e7;
+}
+
+.gallery-footer {
+    padding: 65px 25px;
+
+    background: #e6eee4;
+
+    text-align: center;
+}
+
+.gallery-footer h2 {
+    margin-bottom: 8px;
+
+    color: var(--hijau);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 30px;
+}
+
+.gallery-footer p {
+    color: var(--abu);
+}
+
+
+/* =================================
    FOOTER
-========================= */
+================================= */
 
 footer {
     padding: 25px;
 
-    background: #1d3d2e;
+    background: var(--hijau-tua);
 
     color: #dce5dd;
 
@@ -424,24 +795,16 @@ footer {
 }
 
 
-/* =========================
+/* =================================
    ANIMASI
-========================= */
-
-.hero-content {
-    animation: muncul 0.9s ease;
-}
-
-.feature-card {
-    animation: muncul 0.8s ease;
-}
+================================= */
 
 @keyframes muncul {
 
     from {
         opacity: 0;
 
-        transform: translateY(25px);
+        transform: translateY(20px);
     }
 
     to {
@@ -453,18 +816,49 @@ footer {
 }
 
 
-/* =========================
-   RESPONSIVE HP
-========================= */
+/* =================================
+   TABLET
+================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 0;
+    }
+
+    .nav-links a {
+        padding: 8px 9px;
+
+        font-size: 13px;
+    }
+
+    .about {
+        gap: 30px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =================================
+   HP
+================================= */
+
+@media (max-width: 700px) {
 
     /* NAVBAR */
 
     .navbar {
         min-height: 65px;
 
-        padding: 0 20px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 18px;
     }
 
     .menu-toggle {
@@ -475,21 +869,22 @@ footer {
         position: absolute;
 
         top: 65px;
-
         left: 0;
-
         right: 0;
 
         display: none;
 
         flex-direction: column;
 
-        padding: 15px 20px;
+        align-items: stretch;
+
+        padding: 10px 15px 15px;
 
         background: var(--krem);
 
-        box-shadow:
-            0 10px 25px rgba(0,0,0,0.08);
+        border-bottom: 1px solid var(--border);
+
+        box-shadow: 0 12px 25px rgba(0,0,0,0.08);
     }
 
     .nav-links.show {
@@ -498,29 +893,30 @@ footer {
 
     .nav-links a {
         padding: 12px;
+
+        font-size: 14px;
     }
 
 
     /* HERO */
 
     .hero {
-        min-height: 570px;
+        min-height: 600px;
     }
 
     .hero-content {
-        padding: 60px 20px;
+        padding: 65px 20px;
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 47px;
     }
 
     .hero p {
         font-size: 15px;
+
+        margin: 18px 0 25px;
     }
-
-
-    /* BUTTON */
 
     .hero-buttons {
         flex-direction: column;
@@ -528,65 +924,171 @@ footer {
         align-items: flex-start;
     }
 
-    .btn {
-        padding: 11px 18px;
-    }
-
 
     /* SECTION */
 
     .section {
-        padding: 65px 20px;
+        padding: 65px 18px;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
     }
 
     .section-title h2 {
-        font-size: 31px;
+        font-size: 30px;
     }
 
 
-    /* CARD */
+    /* HOME CARD */
 
     .feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 25px;
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+        padding: 65px 20px;
+    }
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .about-text h2 {
+        font-size: 31px;
+    }
+
+    .info-box {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ALAM */
+
+    .nature-grid {
         grid-template-columns: 1fr;
 
         gap: 18px;
     }
 
-    .feature-card {
+    .nature-card img {
+        height: 220px;
+    }
+
+    .nature-card h3 {
+        font-size: 22px;
+    }
+
+    .nature-message {
+        padding: 60px 20px;
+    }
+
+    .nature-message h2 {
+        font-size: 28px;
+    }
+
+
+    /* BUDAYA */
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .culture-card {
         padding: 27px;
+    }
+
+    .community {
+        padding: 65px 20px;
+    }
+
+    .community-content h2 {
+        font-size: 30px;
+    }
+
+
+    /* GALERI */
+
+    .gallery {
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+    }
+
+    .gallery-item {
+        min-height: 250px;
+    }
+
+    .gallery-item img {
+        min-height: 250px;
+    }
+
+    .gallery-footer {
+        padding: 55px 20px;
+    }
+
+    .gallery-footer h2 {
+        font-size: 27px;
     }
 
 
     /* QUOTE */
 
-    .quote {
-        font-size: 22px;
+    .quote-section {
+        padding: 60px 20px;
     }
 
-
-    /* FOOTER */
-
-    footer {
-        font-size: 12px;
+    .quote {
+        font-size: 22px;
     }
 
 }
 
 
-/* HP KECIL */
+/* =================================
+   HP KECIL
+================================= */
 
 @media (max-width: 400px) {
 
     .logo {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .hero h1 {
-        font-size: 41px;
+        font-size: 40px;
     }
 
     .hero {
-        min-height: 550px;
+        min-height: 560px;
     }
 
-                     }
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+   }
