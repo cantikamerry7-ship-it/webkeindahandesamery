@@ -1157,10 +1157,12 @@ footer {
     }
 
 }
-. suasana-senja{
+.nature-card img.suasana-senja {
     object-fit: cover !important;
     object-position: center 90% !important;
 }
+
+
 
 
 
