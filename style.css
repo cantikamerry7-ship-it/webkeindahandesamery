@@ -1009,6 +1009,12 @@ footer {
     object-position: left top !important;
    }
 
+   .nature-card img.foto-jalan {
+    height: 300px !important;
+    object-fit: cover !important;
+    object-position: center bottom !important;
+   }
+
     .nature-card h3 {
         font-size: 22px;
     }
