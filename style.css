@@ -1157,10 +1157,13 @@ footer {
     }
 
 }
-.foto-langit {
+. suasana-senja{
     object-fit: cover !important;
     object-position: center 90% !important;
 }
+
+
+
 
 
 
