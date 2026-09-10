@@ -1182,7 +1182,56 @@ footer {
 
 }
 
+/* =================================
+   UKURAN KHUSUS GALERI
+================================= */
 
+/* Panorama Desa dibuat sama seperti card lainnya */
+.gallery-item.panorama-desa {
+    min-height: 280px;
+}
+
+.gallery-item.panorama-desa img {
+    height: 280px;
+    min-height: 280px;
+    object-fit: cover;
+}
+
+
+/* Kegiatan Masyarakat dibuat lebih tinggi */
+.gallery-item.kegiatan-masyarakat {
+    min-height: 520px;
+}
+
+.gallery-item.kegiatan-masyarakat img {
+    height: 520px;
+    min-height: 520px;
+    object-fit: cover;
+}
+
+
+/* KHUSUS HP */
+@media (max-width: 700px) {
+
+    .gallery-item.panorama-desa {
+        min-height: 250px;
+    }
+
+    .gallery-item.panorama-desa img {
+        height: 250px;
+        min-height: 250px;
+    }
+
+    .gallery-item.kegiatan-masyarakat {
+        min-height: 520px;
+    }
+
+    .gallery-item.kegiatan-masyarakat img {
+        height: 520px;
+        min-height: 520px;
+    }
+
+}
 
 
 
