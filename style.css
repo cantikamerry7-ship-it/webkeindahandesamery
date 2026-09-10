@@ -1003,6 +1003,12 @@ footer {
     object-position: center bottom !important;
    }
 
+   .nature-card img.foto-pepohonan {
+    height: 300px !important;
+    object-fit: cover !important;
+    object-position: left top !important;
+   }
+
     .nature-card h3 {
         font-size: 22px;
     }
