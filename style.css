@@ -1136,8 +1136,7 @@ footer {
 .village-photo-image img {
     width: 100%;
     height: 380px;
-    object-fit: contain;
-    background: #e6eee4;
+    object-fit: cover;
     transition: 0.5s ease;
 }
 
