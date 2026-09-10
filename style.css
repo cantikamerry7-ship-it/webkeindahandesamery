@@ -1182,69 +1182,50 @@ footer {
 
 }
 
-/* =================================
-   UKURAN KHUSUS GALERI
-================================= */
+/* ===== PERBAIKAN UKURAN GALERI ===== */
 
-/* Panorama Desa dibuat sama seperti card lainnya */
-.gallery-item.panorama-desa {
-    min-height: 280px;
+.gallery .gallery-item.panorama-desa {
+    height: 280px !important;
+    min-height: 280px !important;
 }
 
-.gallery-item.panorama-desa img {
-    height: 280px;
-    min-height: 280px;
-    object-fit: cover;
+.gallery .gallery-item.panorama-desa img {
+    height: 280px !important;
+    min-height: 280px !important;
 }
 
-
-/* Kegiatan Masyarakat dibuat lebih tinggi */
-.gallery-item.kegiatan-masyarakat {
-    min-height: 520px;
+.gallery .gallery-item.kegiatan-masyarakat {
+    height: 520px !important;
+    min-height: 520px !important;
 }
 
-.gallery-item.kegiatan-masyarakat img {
-    height: 520px;
-    min-height: 520px;
-    object-fit: cover;
+.gallery .gallery-item.kegiatan-masyarakat img {
+    height: 520px !important;
+    min-height: 520px !important;
 }
 
 
-/* KHUSUS HP */
+/* ===== HP ===== */
 @media (max-width: 700px) {
 
-    .gallery-item.panorama-desa {
-        min-height: 250px;
+    .gallery .gallery-item.panorama-desa {
+        height: 250px !important;
+        min-height: 250px !important;
     }
 
-    .gallery-item.panorama-desa img {
-        height: 250px;
-        min-height: 250px;
+    .gallery .gallery-item.panorama-desa img {
+        height: 250px !important;
+        min-height: 250px !important;
     }
 
-    .gallery-item.kegiatan-masyarakat {
-        min-height: 520px;
+    .gallery .gallery-item.kegiatan-masyarakat {
+        height: 520px !important;
+        min-height: 520px !important;
     }
 
-    .gallery-item.kegiatan-masyarakat img {
-        height: 520px;
-        min-height: 520px;
+    .gallery .gallery-item.kegiatan-masyarakat img {
+        height: 520px !important;
+        min-height: 520px !important;
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
