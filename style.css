@@ -1291,3 +1291,95 @@ footer {
         transform: scale(1.15);
     }
 }
+/* =========================
+   HALAMAN LOKASI
+========================= */
+
+.location-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.location-card {
+    padding: 30px 25px;
+    background: #ffffff;
+    border: 1px solid #e3e8df;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(35, 63, 47, 0.08);
+}
+
+.location-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.location-card h3 {
+    margin: 0 0 8px;
+    color: #285943;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+.location-card p {
+    margin: 0;
+    color: #68746c;
+    line-height: 1.6;
+}
+
+.location-section {
+    padding-top: 20px;
+}
+
+.location-heading {
+    margin-bottom: 25px;
+}
+
+.location-heading h2 {
+    margin: 8px 0;
+    color: #285943;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+.location-heading p {
+    color: #68746c;
+}
+
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(35, 63, 47, 0.12);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+.map-button {
+    margin-top: 25px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+
+    .location-info {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .location-card {
+        padding: 25px 20px;
+    }
+
+    .location-heading h2 {
+        font-size: 27px;
+    }
+
+    .map-container iframe {
+        height: 350px;
+    }
+
+}
