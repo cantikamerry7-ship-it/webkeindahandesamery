@@ -1182,50 +1182,49 @@ footer {
 
 }
 
-/* ===== PERBAIKAN UKURAN GALERI ===== */
-
-.gallery .gallery-item.panorama-desa {
-    height: 280px !important;
+/* PANORAMA DESA = UKURAN BIASA */
+.gallery-item.panorama-desa {
     min-height: 280px !important;
-}
-
-.gallery .gallery-item.panorama-desa img {
     height: 280px !important;
+}
+
+.gallery-item.panorama-desa img {
     min-height: 280px !important;
+    height: 280px !important;
 }
 
-.gallery .gallery-item.kegiatan-masyarakat {
-    height: 520px !important;
+/* KEGIATAN MASYARAKAT = UKURAN PANORAMA */
+.gallery-item.kegiatan-masyarakat {
     min-height: 520px !important;
-}
-
-.gallery .gallery-item.kegiatan-masyarakat img {
     height: 520px !important;
-    min-height: 520px !important;
 }
 
+.gallery-item.kegiatan-masyarakat img {
+    min-height: 520px !important;
+    height: 520px !important;
+}
 
-/* ===== HP ===== */
+/* HP */
 @media (max-width: 700px) {
 
-    .gallery .gallery-item.panorama-desa {
-        height: 250px !important;
+    .gallery-item.panorama-desa {
         min-height: 250px !important;
-    }
-
-    .gallery .gallery-item.panorama-desa img {
         height: 250px !important;
+    }
+
+    .gallery-item.panorama-desa img {
         min-height: 250px !important;
+        height: 250px !important;
     }
 
-    .gallery .gallery-item.kegiatan-masyarakat {
-        height: 520px !important;
+    .gallery-item.kegiatan-masyarakat {
         min-height: 520px !important;
+        height: 520px !important;
     }
 
-    .gallery .gallery-item.kegiatan-masyarakat img {
-        height: 520px !important;
+    .gallery-item.kegiatan-masyarakat img {
         min-height: 520px !important;
+        height: 520px !important;
     }
 
 }
