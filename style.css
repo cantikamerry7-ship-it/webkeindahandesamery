@@ -1269,3 +1269,7 @@ footer {
     }
 
 }
+/* FOTO MASJID */
+.about-image img {
+    object-position: center bottom !important;
+}
