@@ -1018,7 +1018,7 @@ footer {
    .nature-card img.foto-sawah {
     height: 300px !important;
     object-fit: cover !important;
-    object-position: center bottom !important;
+    object-position: center 70% !important;
    }
 
     .nature-card h3 {
