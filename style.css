@@ -1157,3 +1157,7 @@ footer {
     }
 
 }
+.foto-langit {
+    object-fit: cover;
+    object-position: center 65%;
+}
