@@ -341,9 +341,60 @@
 
 </footer>
 
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycbxiq1dDf6KO71Wd3Xkz7rLrbxWhGJKs2JKeNhDeoypfVYrsnjF-ZkfGJGIj-4CIRyEi/exec";
 
+document.getElementById("bukuTamuForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nama = document.getElementById("nama").value;
+    const email = document.getElementById("email").value;
+    const pesan = document.getElementById("pesan").value;
+    const status = document.getElementById("statusPesan");
+
+    status.textContent = "Mengirim...";
+
+    const formKirim = document.createElement("form");
+    formKirim.method = "POST";
+    formKirim.action = scriptURL;
+    formKirim.target = "_blank";
+
+    const inputNama = document.createElement("input");
+    inputNama.name = "nama";
+    inputNama.value = nama;
+
+    const inputEmail = document.createElement("input");
+    inputEmail.name = "email";
+    inputEmail.value = email;
+
+    const inputPesan = document.createElement("input");
+    inputPesan.name = "pesan";
+    inputPesan.value = pesan;
+
+    formKirim.appendChild(inputNama);
+    formKirim.appendChild(inputEmail);
+    formKirim.appendChild(inputPesan);
+
+    document.body.appendChild(formKirim);
+    formKirim.submit();
+
+    status.textContent = "Aspirasi berhasil dikirim 🌿";
+    document.getElementById("bukuTamuForm").reset();
+    formKirim.remove();
+});
+</script>
+    
 <script src="script.js"></script>
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
