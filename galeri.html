@@ -369,13 +369,10 @@ document.getElementById("bukuTamuForm").addEventListener("submit", function(e) {
     status.textContent = "Mengirim...";
 
     fetch(scriptURL, {
-        method: "POST",
-        mode: "no-cors",
-        body: new URLSearchParams({
-            nama: nama,
-            pesan: pesan
-        })
-    })
+    method: "POST",
+    mode: "no-cors",
+    body: `nama=${encodeURIComponent(nama)}&pesan=${encodeURIComponent(pesan)}`
+})
     .then(() => {
         status.textContent = "Pesan berhasil dikirim 🌿";
         document.getElementById("bukuTamuForm").reset();
