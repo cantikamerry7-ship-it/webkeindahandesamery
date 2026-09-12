@@ -368,18 +368,28 @@ document.getElementById("bukuTamuForm").addEventListener("submit", function(e) {
 
     status.textContent = "Mengirim...";
 
-    fetch(scriptURL, {
-    method: "POST",
-    mode: "no-cors",
-    body: `nama=${encodeURIComponent(nama)}&pesan=${encodeURIComponent(pesan)}`
-})
-    .then(() => {
-        status.textContent = "Pesan berhasil dikirim 🌿";
-        document.getElementById("bukuTamuForm").reset();
-    })
-    .catch(() => {
-        status.textContent = "Pesan gagal dikirim.";
-    });
+    const formKirim = document.createElement("form");
+formKirim.method = "POST";
+formKirim.action = scriptURL;
+formKirim.target = "_blank";
+
+const inputNama = document.createElement("input");
+inputNama.name = "nama";
+inputNama.value = nama;
+
+const inputPesan = document.createElement("input");
+inputPesan.name = "pesan";
+inputPesan.value = pesan;
+
+formKirim.appendChild(inputNama);
+formKirim.appendChild(inputPesan);
+document.body.appendChild(formKirim);
+
+formKirim.submit();
+
+status.textContent = "Pesan berhasil dikirim 🌿";
+document.getElementById("bukuTamuForm").reset();
+formKirim.remove();
 });
 </script>
 
